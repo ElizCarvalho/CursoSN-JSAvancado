@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <!-- Navbar Boostrap -->
+        <nav class="navbar navbar-light bg-light">
+            <a id="navTitle" class="navbar-brand" href="index.html"></a>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="form-inline" style="margin-bottom: 10px; margin-top: 10px;">
+                <div class="form-group" style="margin-right: 10px;">
+                    <input type="text" class="form-control" id="desc" placeholder="Descrição" />
+                </div>
+                <div class="form-group" style="margin-right: 10px;">
+                    <input type="number" class="form-control" id="qnt" placeholder="Qnt." />
+                </div>
+                <div class="form-group" style="margin-right: 10px;">
+                    <input type="text" class="form-control" id="valor" placeholder="Valor" />
+                </div>
+                <span id="btnUpdate" style="display: none;">
+                    <span id="inputIDUpdate"></span>
+                    <button onclick="updateData();" class="btn btn-success">Update</button>
+                    <button onclick="resetForm();" class="btn btn-danger">Cancel</button>
+                </span>
+                <span id="btnAdd">
+                    <button onclick="addData();" class="btn btn-primary">Add</button>
+                    <button onclick="resetForm();" class="btn btn-warning">Reset</button>
+                    <button onclick="deleteList();" class="btn btn-danger">Deletar Lista</button>
+                </span>
+            </div>
+            <div id="erros" style="display: none;"></div>
+            <table id="listTable" class="table"></table>
+        </div>
+
+        <nav class="navbar fixed-bottom">
+            <div class="container">
+                <h4 class="text-success" style="margin-left: 40%;">Total: <span id="totalValor">$ 0,00</span></h4>
+            </div>
+        </nav>
+
+        <script src="js/config.js"></script>
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>
